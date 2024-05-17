@@ -1,0 +1,16 @@
+syntax = "proto3" ;
+
+option go_package = "./" ; // path where auto genrated code is stored
+
+message CReqt { // message is keyword
+   string Reqt = 1 ; // 1 is sequece in which it will be sent
+}
+
+message SResp {
+   string Resp = 1 ; // for Reqt , Resp is response
+}
+
+service Expl { // service keyword
+   rpc SReply (CReqt) returns (SResp);
+   rpc SReply2 (CReqt) returns (CReqt);
+}
