@@ -37,7 +37,9 @@ NOTE : `Stubs` = `Messages` = `protobuf file` (.proto file / proto buffer file)
 
 - json , xml vs buffer :
 json   : {"key" : "value"} --> light wieght
+
 xml    : <tag> </tag>    --> Heavy wieght
+
 buffer : [bytes] >> array of bytes --> lighter
 
 - Types of gRPC/RPC :
