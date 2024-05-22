@@ -1,0 +1,15 @@
+syntax="proto3";
+
+option go_package="./";
+
+service WithAPI {
+    rpc ServerResp (Creqt) returns (Sresp);
+}
+
+message Creqt{
+    string Reqt =1;
+}
+
+message Sresp{
+    string Resp = 1;
+}
