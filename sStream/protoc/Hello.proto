@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "./";
+
+service SStream {
+    rpc ServerReply(CReqt) returns (stream SResps);
+}
+
+message CReqt{
+    string Reqt =1;
+}
+
+message SResps{
+    string Resps =1;
+}
