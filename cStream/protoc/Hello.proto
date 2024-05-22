@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "./";
+
+// for client streaming procedure accepts `stream of params`
+// stream is keyword
+service ClientStream {
+ rpc ServerReply (stream CReqt) returns (SReply);
+}
+
+message CReqt {
+   string Reqt =1; 
+}
+
+message SReply{
+    string Resp =1;
+}
