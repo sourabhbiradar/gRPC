@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package="./"; //  path
+
+service Example{
+    rpc ServerReply(HelloReqt) returns (HelloResp);
+}
+
+message HelloReqt {
+    string Hreqt = 1;
+}
+
+message HelloResp {
+    string Hresp = 1;
+}
