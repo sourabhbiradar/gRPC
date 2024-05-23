@@ -1,0 +1,15 @@
+syntax="proto3";
+
+option go_package ="./";
+
+service BiDir{
+    rpc ServerReply(stream CReq) returns (stream SResp);
+}
+
+message CReq{
+    string Reqt =1; 
+}
+
+message SResp{
+    string Resp =1; 
+}
