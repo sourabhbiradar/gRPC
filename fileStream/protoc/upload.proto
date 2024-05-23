@@ -1,0 +1,17 @@
+syntax="proto3";
+
+option go_package = "./";
+
+service StreamUpload{
+    rpc Upload(stream UploadReqt) returns (UploadResp);
+}
+
+message UploadReqt{
+    string filePath =1;
+    bytes chuncks = 2;
+}
+
+message UploadResp{
+    int64 fileSize=1;
+    string message =2;
+}
